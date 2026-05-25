@@ -109,16 +109,13 @@ Place the filtered `.pkl` file under `data/Processed/{dataset_name}/`, then:
 ```bash
 # Baseline (raw BERT)
 python sasrec/main.py \
-    --config=sasrec/configs/Amazon2018Luxury_440_LOU_HGC.yaml \
-    --ranking=full
+    --config=sasrec/configs/Amazon2018Luxury_440_LOU.yaml \
 
 # PolyFilter (Bernstein-filtered)
 python sasrec/main.py \
-    --config=sasrec/configs/Amazon2018Luxury_440_LOU_HGC_bern.yaml \
-    --ranking=full
+    --config=sasrec/configs/Amazon2018Luxury_440_LOU_bern.yaml \
 ```
 
-The `--ranking=full` mode evaluates on the full item pool. Use `--ranking=pool` for sampled evaluation (faster, used during development).
 
 ### Config File Reference
 
@@ -146,14 +143,3 @@ monitors: [LOSS, HitRate@1, HitRate@5, HitRate@10, NDCG@5, NDCG@10]
 which4best: NDCG@5
 ```
 
-## Citation
-
-```bibtex
-@inproceedings{polyfilter,
-  title     = {What Semantic IDs Lack? {PolyFilter}: Learning Topology-Aligned
-               Semantic {IDs} for Sequential Recommendation},
-  author    = {Anonymous},
-  booktitle = {Proceedings of EMNLP},
-  year      = {2026}
-}
-```
