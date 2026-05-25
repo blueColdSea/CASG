@@ -1,0 +1,23 @@
+device: '2'
+root: ../data
+dataset: Amazon2018Luxury_440_LOU
+tfile: textual_bert-base-uncased_cls.pkl
+
+maxlen: 50
+num_heads: 1
+num_blocks: 2
+embedding_dim: 64
+dropout_rate: 0.5
+
+epochs: 500
+batch_size: 2048
+optimizer: adam
+lr: 5.e-4
+weight_decay: 1.e-5
+loss: BCE
+
+tasktag: NEXTITEM
+
+monitors: [LOSS, HitRate@1, HitRate@5, HitRate@10, NDCG@5, NDCG@10]
+which4best: NDCG@5
+description: SASRecHGC_hidden_dim64
