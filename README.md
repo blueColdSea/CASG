@@ -1,10 +1,4 @@
-# PolyFilter: Learning Topology-Aligned Semantic IDs for Sequential Recommendation
-
-Code for reproducing the core experiments in the PolyFilter paper.
-
 ## Overview
-
-PolyFilter learns topology-aligned semantic representations for sequential recommendation by applying learnable graph spectral filters (Bernstein polynomials) over an item-item co-occurrence graph.
 
 The pipeline has three stages:
 
@@ -20,7 +14,7 @@ Python 3.10+, PyTorch 2.0+, CUDA recommended.
 pip install -r requirements.txt
 ```
 
-The SASRec training uses [FreeRec](https://github.com/Re-bin/FreeRec) (≥0.8.7) as the training framework.
+The SASRec training uses [FreeRec](https://github.com/MTandHJ/freerec) (≥0.8.7) as the training framework.
 
 ## Data Preparation
 
