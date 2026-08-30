@@ -78,7 +78,7 @@ python filter/train_bernstein.py \
     --text_file /path/to/item_text.tsv \
     --train_file /path/to/train_interactions.tsv \
     --output_dir /path/to/filter_output/ \
-    --bern_k 2 \
+    --bern_k 4 \
     --alpha 0.001 \
     --max_length 64 \
     --topk_neighbors 20 \
@@ -88,7 +88,7 @@ python filter/train_bernstein.py \
 ```
 
 Key hyperparameters:
-- `--bern_k` — Bernstein polynomial order (K=2 for BERT, K=4 for Stella in the paper)
+- `--bern_k` — Bernstein polynomial order. In the paper, K is selected on the validation set for each encoder–dataset setting.
 - `--alpha` — preservation loss weight (0.001 for BERT, 0 for Stella)
 - `--topk_neighbors` — per-item neighbor truncation (20 in the paper)
 
